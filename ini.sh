@@ -64,7 +64,6 @@ cd github-search
 pip3 install -r requirements3.txt
 
 
-
 echo "Don't forget to put the API keys on Subfinder on: $HOME/.config/subfinder/config.yaml"
 echo "Don't forget to put the API key on Chaos like this: echo 'export CHAOS_KEY="*************bd853b95252690b3ff86c2c2c08b*******************"' >> $HOME/.bashrc"
-echo "Don't forget to put the API key on Github Search like this: echo 'ghp_dxU8VCHT3bWQybKpfM***********' > /opt/github-search/token"
+echo "Don't forget to put the API key on Github Search like this: echo 'export GITHUB_KEY="ghp_dxU8VCHT3bWQybKpfM***********"' >> $HOME/.bashrc"
