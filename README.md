@@ -17,3 +17,10 @@ all tools that wee need on course and in my life as bug hunter.
 ```
 chmod +x ./ini.sh; ./ini.sh
 ```
+
+## Get API Keys
+
+- [To get the shodan API visit](https://account.shodan.io/)
+- [To get the Chaos API visit](https://chaos.projectdiscovery.io/)
+- [To get the Github API visit](https://github.com/settings/tokens/new)
+- [To get the SecurityTrails API visit](https://securitytrails.com/app/account/credentials)
