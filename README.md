@@ -43,4 +43,3 @@ inurl:security@ report vulnerability
 ```
 inurl:bugbounty reward program
 ```
-
