@@ -49,11 +49,22 @@ wget https://github.com/findomain/findomain/releases/latest/download/findomain-l
 chmod +x findomain-linux
 ln -s /opt/findomain-linux /usr/bin/findomain
 
+
 echo "Installing Chaos"
 
 GO111MODULE=on go get -v github.com/projectdiscovery/chaos-client/cmd/chaos
 ln -s $HOME/go/bin/chaos /usr/bin/chaos
 
 
+echo "Installing Github Search"
+
+cd /opt
+git clone https://github.com/gwen001/github-search.git
+cd github-search
+pip3 install -r requirements3.txt
+
+
+
 echo "Don't forget to put the API keys on Subfinder on: $HOME/.config/subfinder/config.yaml"
-echo "Don't forget to put the API key on Chaos like this: echo 'export CHAOS_KEY="0800bd853b95252690b3ff86c2c2c08bbfe085c8bb649a6a1b3aa4717caa62e7"'"
+echo "Don't forget to put the API key on Chaos like this: echo 'export CHAOS_KEY="*************bd853b95252690b3ff86c2c2c08b*******************"' >> $HOME/.bashrc"
+echo "Don't forget to put the API key on Github Search like this: echo 'ghp_dxU8VCHT3bWQybKpfM***********' > /opt/github-search/token"
