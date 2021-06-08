@@ -49,5 +49,11 @@ wget https://github.com/findomain/findomain/releases/latest/download/findomain-l
 chmod +x findomain-linux
 ln -s /opt/findomain-linux /usr/bin/findomain
 
+echo "Installing Chaos"
+
+GO111MODULE=on go get -v github.com/projectdiscovery/chaos-client/cmd/chaos
+ln -s $HOME/go/bin/chaos /usr/bin/chaos
+
 
 echo "Don't forget to put the API keys on Subfinder on: $HOME/.config/subfinder/config.yaml"
+echo "Don't forget to put the API key on Chaos like this: echo 'export CHAOS_KEY="0800bd853b95252690b3ff86c2c2c08bbfe085c8bb649a6a1b3aa4717caa62e7"'"
