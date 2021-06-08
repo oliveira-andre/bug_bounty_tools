@@ -15,6 +15,7 @@ echo "Installing Go"
 
 wget -c https://golang.org/dl/go1.16.5.linux-amd64.tar.gz
 rm -rf /usr/local/go && tar -C /usr/local -xzf go1.16.5.linux-amd64.tar.gz
+rm -rf go1.16.5.linux-amd64.tar.gz
 
 if [ -f "$HOME/.zshrc" ]; then
   echo 'export PATH=$PATH:/usr/local/go/bin' >> $HOME/.zshrc
