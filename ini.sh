@@ -48,3 +48,6 @@ cd /opt
 wget https://github.com/findomain/findomain/releases/latest/download/findomain-linux
 chmod +x findomain-linux
 ln -s /opt/findomain-linux /usr/bin/findomain
+
+
+echo "Don't forget to put the API keys on Subfinder"
