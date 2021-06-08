@@ -21,3 +21,26 @@ chmod +x ./ini.sh; ./ini.sh
 - [To get the Chaos API visit](https://chaos.projectdiscovery.io/)
 - [To get the Github API visit](https://github.com/settings/tokens/new)
 - [To get the SecurityTrails API visit](https://securitytrails.com/app/account/credentials)
+
+## Google Dorks to find private bug bounty programs
+
+```
+inurl:responsible disclosure program
+```
+
+```
+inurl:vulnerability disclosure program
+```
+
+```
+inurl:vulnerability program rewards 
+```
+
+```
+inurl:security@ report vulnerability
+```
+
+```
+inurl:bugbounty reward program
+```
+
