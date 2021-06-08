@@ -7,7 +7,13 @@ i need to create a automization of this then i created this project to install
 all tools that wee need on course and in my life as bug hunter.
 ```
 
-Requirements:
+## Requirements:
 
 - GNU/Linux
 - wget
+
+## How to run
+
+```
+chmod +x ./ini.sh; ./ini.sh
+```
