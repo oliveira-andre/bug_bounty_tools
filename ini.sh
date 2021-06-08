@@ -50,4 +50,4 @@ chmod +x findomain-linux
 ln -s /opt/findomain-linux /usr/bin/findomain
 
 
-echo "Don't forget to put the API keys on Subfinder"
+echo "Don't forget to put the API keys on Subfinder on: $HOME/.config/subfinder/config.yaml"
