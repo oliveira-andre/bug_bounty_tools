@@ -70,6 +70,12 @@ GO111MODULE=on go get -v github.com/projectdiscovery/httpx/cmd/httpx
 ln -s $HOME/go/bin/httpx /usr/bin/httpx
 
 
+echo "Installing Gowitness"
+
+ go get -v github.com/sensepost/gowitness
+ln -s $HOME/go/bin/gowitness /usr/bin/gowitness
+
+
 echo "Don't forget to put the API keys on Subfinder on: $HOME/.config/subfinder/config.yaml"
 echo "Don't forget to put the API key on Chaos like this: echo 'export CHAOS_KEY="*************bd853b95252690b3ff86c2c2c08b*******************"' >> $HOME/.bashrc"
 echo "Don't forget to put the API key on Github Search like this: echo 'export GITHUB_KEY="ghp_dxU8VCHT3bWQybKpfM***********"' >> $HOME/.bashrc"
