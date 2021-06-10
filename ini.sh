@@ -72,8 +72,14 @@ ln -s $HOME/go/bin/httpx /usr/bin/httpx
 
 echo "Installing Gowitness"
 
- go get -v github.com/sensepost/gowitness
+go get -v github.com/sensepost/gowitness
 ln -s $HOME/go/bin/gowitness /usr/bin/gowitness
+
+
+echo "Installing Waybackurls"
+
+go get -v github.com/tomnomnom/waybackurls
+ln -s $HOME/go/bin/waybackurls /usr/bin/waybackurls
 
 
 echo "Don't forget to put the API keys on Subfinder on: $HOME/.config/subfinder/config.yaml"
