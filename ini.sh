@@ -72,14 +72,39 @@ ln -s $HOME/go/bin/httpx /usr/bin/httpx
 
 echo "Installing Gowitness"
 
-go get -v github.com/sensepost/gowitness
+go get -u -v github.com/sensepost/gowitness
 ln -s $HOME/go/bin/gowitness /usr/bin/gowitness
 
 
 echo "Installing Waybackurls"
 
-go get -v github.com/tomnomnom/waybackurls
+go get -u -v github.com/tomnomnom/waybackurls
 ln -s $HOME/go/bin/waybackurls /usr/bin/waybackurls
+
+
+echo "Installing Gau"
+
+GO111MODULE=on go get -u -v github.com/lc/gau
+ln -s $HOME/go/bin/gau /usr/bin/gau
+
+
+echo "Installing Metabigor"
+
+sudo apt-get install prips -y
+GO111MODULE=on go get github.com/j3ssie/metabigor
+ln -s $HOME/go/bin/metabigor /usr/bin/metabigor
+
+
+echo "Installing Hakrevdns"
+
+go get github.com/hakluke/hakrevdns
+ln -s $HOME/go/bin/hakrevdns /usr/bin/hakrevdns
+
+
+echo "Installing Kxss"
+
+go get github.com/Emoe/kxss
+ln -s $HOME/go/bin/kxss /usr/bin/kxss
 
 
 echo "Don't forget to put the API keys on Subfinder on: $HOME/.config/subfinder/config.yaml"
