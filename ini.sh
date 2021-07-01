@@ -112,6 +112,42 @@ echo "Installing GF"
 go get -u github.com/tomnomnom/gf
 ln -s $HOME/go/bin/gf /usr/bin/gf
 
+if [ -d "$HOME/.gf" ]
+then
+  cd /opt
+  git clone https://github.com/tomnomnom/gf.git
+
+  mkdir /opt/shell_plugins
+  mv /opt/gf/gf-completion.zsh /opt/shell_plugins/gf-completion.zsh
+  echo 'source /opt/shell_plugins/gf-completion.zshrc' >> $HOME/.zshrc
+
+  cp -r /opt/gf/gf/examples $HOME/.gf
+  rm -rf /opt/gf
+
+  git clone https://github.com/1ndianl33t/Gf-Patterns
+  mv /opt/Gf-Patterns/*.json $HOME/.gf
+  rm -rf /opt/Gf-Patterns
+
+  source /opt/shell_plugins/gf-completion.zshrc
+else
+  mkdir $HOME/.gf
+  cd /opt
+  git clone https://github.com/tomnomnom/gf.git
+
+  mkdir /opt/shell_plugins
+  mv /opt/gf/gf-completion.zsh /opt/shell_plugins/gf-completion.zsh
+  echo 'source /opt/shell_plugins/gf-completion.zsh' >> $HOME/.zshrc
+
+  cp -r /opt/gf/gf/examples/* $HOME/.gf
+  rm -rf /opt/gf
+
+  git clone https://github.com/1ndianl33t/Gf-Patterns
+  mv /opt/Gf-Patterns/*.json $HOME/.gf
+  rm -rf /opt/Gf-Patterns
+
+  source /opt/shell_plugins/gf-completion.zshrc
+fi
+
 
 echo "Installing ParamSpider"
 
