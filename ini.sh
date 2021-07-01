@@ -107,6 +107,30 @@ go get github.com/Emoe/kxss
 ln -s $HOME/go/bin/kxss /usr/bin/kxss
 
 
+echo "Installing GF"
+
+go get -u github.com/tomnomnom/gf
+ln -s $HOME/go/bin/gf /usr/bin/gf
+
+
+echo "Installing ParamSpider"
+
+cd /opt
+git clone https://github.com/devanshbatham/ParamSpider
+pip3 install -r requirements.txt
+
+
+echo "Installing Unfur"
+
+go get -u github.com/tomnomnom/unfurl
+ln -s $HOME/go/bin/unfurl /usr/bin/unfurl
+
+
+echo "Installing Arjun"
+
+pip3 install arjun
+
+
 echo "Don't forget to put the API keys on Subfinder on: $HOME/.config/subfinder/config.yaml"
 echo "Don't forget to put the API key on Chaos like this: echo 'export CHAOS_KEY="*************bd853b95252690b3ff86c2c2c08b*******************"' >> $HOME/.bashrc"
 echo "Don't forget to put the API key on Github Search like this: echo 'export GITHUB_KEY="ghp_dxU8VCHT3bWQybKpfM***********"' >> $HOME/.bashrc"
