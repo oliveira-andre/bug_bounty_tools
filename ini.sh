@@ -175,8 +175,9 @@ GO111MODULE=on go get -u -v github.com/lc/subjs
 ln -s $HOME/go/bin/subjs /usr/bin/subjs
 
 
-echo "Installing Subjs"
+echo "Installing Antiburl"
 
+cd /opt
 wget https://raw.githubusercontent.com/tomnomnom/hacks/master/anti-burl/main.go
 go build main.go
 
@@ -184,6 +185,12 @@ rm -rf main.go
 mv main $HOME/go/bin/anti-burl
 
 ln -s $HOME/go/bin/anti-burl /usr/bin/anti-burl
+
+
+echo "Installing Js collector"
+
+cd /opt
+wget https://raw.githubusercontent.com/KingOfBugbounty/Bug-Bounty-Toolz/master/collector.py
 
 
 echo "Don't forget to put the API keys on Subfinder on: $HOME/.config/subfinder/config.yaml"
