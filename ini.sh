@@ -164,7 +164,15 @@ ln -s $HOME/go/bin/unfurl /usr/bin/unfurl
 
 echo "Installing Arjun"
 
-pip3 install arjun
+cd /opt
+git clone https://github.com/s0md3v/Arjun.git
+sudo python3 /opt/Arjun/setup.py install
+
+
+echo "Installing Subjs"
+
+GO111MODULE=on go get -u -v github.com/lc/subjs
+ln -s $HOME/go/bin/subjs /usr/bin/subjs
 
 
 echo "Don't forget to put the API keys on Subfinder on: $HOME/.config/subfinder/config.yaml"
