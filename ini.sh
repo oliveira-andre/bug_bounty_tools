@@ -175,6 +175,17 @@ GO111MODULE=on go get -u -v github.com/lc/subjs
 ln -s $HOME/go/bin/subjs /usr/bin/subjs
 
 
+echo "Installing Subjs"
+
+wget https://raw.githubusercontent.com/tomnomnom/hacks/master/anti-burl/main.go
+go build main.go
+
+rm -rf main.go
+mv main $HOME/go/bin/anti-burl
+
+ln -s $HOME/go/bin/anti-burl /usr/bin/anti-burl
+
+
 echo "Don't forget to put the API keys on Subfinder on: $HOME/.config/subfinder/config.yaml"
 echo "Don't forget to put the API key on Chaos like this: echo 'export CHAOS_KEY="*************bd853b95252690b3ff86c2c2c08b*******************"' >> $HOME/.bashrc"
 echo "Don't forget to put the API key on Github Search like this: echo 'export GITHUB_KEY="ghp_dxU8VCHT3bWQybKpfM***********"' >> $HOME/.bashrc"
