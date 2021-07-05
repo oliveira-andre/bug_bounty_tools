@@ -206,6 +206,12 @@ wget https://github.com/assetnote/kiterunner/releases/download/v1.0.2/kiterunner
 ln -s /opt/kr /usr/bin/kite
 
 
+echo "Installing Ffuf"
+
+go get -u github.com/ffuf/ffuf
+ln -s $HOME/go/bin/ffuf /usr/bin/ffuf
+
+
 echo "Don't forget to put the API keys on Subfinder on: $HOME/.config/subfinder/config.yaml"
 echo "Don't forget to put the API key on Chaos like this: echo 'export CHAOS_KEY="*************bd853b95252690b3ff86c2c2c08b*******************"' >> $HOME/.bashrc"
 echo "Don't forget to put the API key on Github Search like this: echo 'export GITHUB_KEY="ghp_dxU8VCHT3bWQybKpfM***********"' >> $HOME/.bashrc"
