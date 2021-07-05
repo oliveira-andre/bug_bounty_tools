@@ -107,6 +107,12 @@ go get github.com/Emoe/kxss
 ln -s $HOME/go/bin/kxss /usr/bin/kxss
 
 
+echo "Installing Dalfox"
+
+GO111MODULE=on go get -v github.com/hahwul/dalfox/v2
+ln -s $HOME/go/bin/dalfox /usr/bin/dalfox
+
+
 echo "Installing GF"
 
 go get -u github.com/tomnomnom/gf
@@ -191,6 +197,13 @@ echo "Installing Js collector"
 
 cd /opt
 wget https://raw.githubusercontent.com/KingOfBugbounty/Bug-Bounty-Toolz/master/collector.py
+
+
+echo "Installing Kiterunner"
+
+cd /opt
+wget https://github.com/assetnote/kiterunner/releases/download/v1.0.2/kiterunner_1.0.2_linux_amd64.tar.gz
+ln -s /opt/kr /usr/bin/kite
 
 
 echo "Don't forget to put the API keys on Subfinder on: $HOME/.config/subfinder/config.yaml"
