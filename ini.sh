@@ -88,6 +88,12 @@ GO111MODULE=on go get -u -v github.com/lc/gau
 ln -s $HOME/go/bin/gau /usr/bin/gau
 
 
+echo "Installing GauPlus"
+
+GO111MODULE=on go get -u -v github.com/bp0lr/gauplus
+ln -s $HOME/go/bin/gauplus /usr/bin/gauplus
+
+
 echo "Installing Metabigor"
 
 sudo apt-get install prips -y
