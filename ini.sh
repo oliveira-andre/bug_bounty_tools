@@ -225,6 +225,14 @@ ln -s $HOME/go/bin/nuclei /usr/bin/nuclei
 nuclei -update-templates
 
 
+echo "Installing JSscanner"
+
+cd /opt
+git clone https://github.com/0x240x23elu/JSScanner.git
+cd JSScanner
+pip3 install -r requirements.txt
+
+
 
 echo "Don't forget to put the API keys on Subfinder on: $HOME/.config/subfinder/config.yaml"
 echo "Don't forget to put the API key on Chaos like this: echo 'export CHAOS_KEY="*************bd853b95252690b3ff86c2c2c08b*******************"' >> $HOME/.bashrc"
