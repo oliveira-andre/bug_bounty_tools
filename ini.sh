@@ -222,6 +222,7 @@ echo "Installing Nuclei"
 
 GO111MODULE=on go get -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
 ln -s $HOME/go/bin/nuclei /usr/bin/nuclei
+nuclei -update-templates
 
 
 
