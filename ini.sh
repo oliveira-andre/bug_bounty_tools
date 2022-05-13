@@ -114,6 +114,12 @@ dependencies() {
   ln -s $HOME/go/bin/hakrevdns /usr/bin/hakrevdns
 
 
+  echo "Installing hakcheckurl"
+
+  go install github.com/hakluke/hakcheckurl@latest
+  ln -s $HOME/go/bin/hakcheckurl /usr/bin/hakcheckurl
+
+
   echo "Installing Kxss"
 
   go get github.com/Emoe/kxss
