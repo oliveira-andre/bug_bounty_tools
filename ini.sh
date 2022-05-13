@@ -88,6 +88,13 @@ dependencies() {
   ln -s $HOME/go/bin/waybackurls /usr/bin/waybackurls
 
 
+  echo "Installing GauPlus"
+
+  GO111MODULE=on go get -u -v github.com/bp0lr/gauplus
+  ln -s $HOME/go/bin/gauplus /usr/bin/gauplus
+
+
+
   echo "Installing Gau"
 
   GO111MODULE=on go get -u -v github.com/lc/gau
@@ -111,6 +118,125 @@ dependencies() {
 
   go get github.com/Emoe/kxss
   ln -s $HOME/go/bin/kxss /usr/bin/kxss
+
+  echo "Installing Dalfox"
+
+  GO111MODULE=on go get -v github.com/hahwul/dalfox/v2
+  ln -s $HOME/go/bin/dalfox /usr/bin/dalfox
+
+
+  echo "Installing GF"
+
+  go get -u github.com/tomnomnom/gf
+  ln -s $HOME/go/bin/gf /usr/bin/gf
+
+  if [ -d "$HOME/.gf" ]
+  then
+    cd /opt
+    git clone https://github.com/tomnomnom/gf.git
+
+    mkdir /opt/shell_plugins
+    mv /opt/gf/gf-completion.zsh /opt/shell_plugins/gf-completion.zsh
+    echo 'source /opt/shell_plugins/gf-completion.zshrc' >> $HOME/.zshrc
+
+    cp -r /opt/gf/gf/examples $HOME/.gf
+    rm -rf /opt/gf
+
+    git clone https://github.com/1ndianl33t/Gf-Patterns
+    mv /opt/Gf-Patterns/*.json $HOME/.gf
+    rm -rf /opt/Gf-Patterns
+
+    source /opt/shell_plugins/gf-completion.zshrc
+  else
+    mkdir $HOME/.gf
+    cd /opt
+    git clone https://github.com/tomnomnom/gf.git
+
+    mkdir /opt/shell_plugins
+    mv /opt/gf/gf-completion.zsh /opt/shell_plugins/gf-completion.zsh
+    echo 'source /opt/shell_plugins/gf-completion.zsh' >> $HOME/.zshrc
+
+    cp -r /opt/gf/gf/examples/* $HOME/.gf
+    rm -rf /opt/gf
+
+    git clone https://github.com/1ndianl33t/Gf-Patterns
+    mv /opt/Gf-Patterns/*.json $HOME/.gf
+    rm -rf /opt/Gf-Patterns
+
+    source /opt/shell_plugins/gf-completion.zshrc
+  fi
+
+
+  echo "Installing ParamSpider"
+
+  cd /opt
+  git clone https://github.com/devanshbatham/ParamSpider
+  pip3 install -r requirements.txt
+
+
+  echo "Installing Unfur"
+
+  go get -u github.com/tomnomnom/unfurl
+  ln -s $HOME/go/bin/unfurl /usr/bin/unfurl
+
+
+  echo "Installing Arjun"
+
+  cd /opt
+  git clone https://github.com/s0md3v/Arjun.git
+  sudo python3 /opt/Arjun/setup.py install
+
+
+  echo "Installing Subjs"
+
+  GO111MODULE=on go get -u -v github.com/lc/subjs
+  ln -s $HOME/go/bin/subjs /usr/bin/subjs
+
+
+  echo "Installing Antiburl"
+
+  cd /opt
+  wget https://raw.githubusercontent.com/tomnomnom/hacks/master/anti-burl/main.go
+  go build main.go
+
+  rm -rf main.go
+  mv main $HOME/go/bin/anti-burl
+
+  ln -s $HOME/go/bin/anti-burl /usr/bin/anti-burl
+
+
+  echo "Installing Js collector"
+
+  cd /opt
+  wget https://raw.githubusercontent.com/KingOfBugbounty/Bug-Bounty-Toolz/master/collector.py
+
+
+  echo "Installing Kiterunner"
+
+  cd /opt
+  wget https://github.com/assetnote/kiterunner/releases/download/v1.0.2/kiterunner_1.0.2_linux_amd64.tar.gz
+  ln -s /opt/kr /usr/bin/kite
+
+
+  echo "Installing Ffuf"
+
+  go get -u github.com/ffuf/ffuf
+  ln -s $HOME/go/bin/ffuf /usr/bin/ffuf
+
+
+  echo "Installing Nuclei"
+
+  GO111MODULE=on go get -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
+  ln -s $HOME/go/bin/nuclei /usr/bin/nuclei
+  nuclei -update-templates
+
+
+  echo "Installing JSscanner"
+
+  cd /opt
+  git clone https://github.com/0x240x23elu/JSScanner.git
+  cd JSScanner
+  pip3 install -r requirements.txt
 
 
   echo "Don't forget to put the API keys on Subfinder on: $HOME/.config/subfinder/config.yaml"
