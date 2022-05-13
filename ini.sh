@@ -266,7 +266,12 @@ dependencies() {
   cd /opt
   git clone https://github.com/s0md3v/Photon.git
   cd Photon
-  sudo docker build -t photon .
+  pip3 install -r requirements.txt
+
+
+  echo "Installing Meg"
+  go install -v github.com/tomnomnom/meg
+  ln -s $HOME/go/bin/meg /usr/bin/meg
 
 
   echo "Don't forget to put the API keys on Subfinder on: $HOME/.config/subfinder/config.yaml"
