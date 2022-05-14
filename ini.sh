@@ -408,10 +408,19 @@ installUro() {
 installFreq() {
   printf "${YELLOW}[*]${CLEAN} Installing Freq${END}"
 
-  go install github.com/takshal/freq
+  go install github.com/takshal/freq@latest
   ln -s $HOME/go/bin/freq /usr/bin/freq
 
   printf "${GREEN}[+]${CLEAN} Freq Installed${END}${END}"
+}
+
+installSdlookup() {
+  printf "${YELLOW}[*]${CLEAN} Installing Sdlookup${END}"
+
+  go install github.com/j3ssie/sdlookup@latest
+  ln -s $HOME/go/bin/sdlookup /usr/bin/sdlookup
+
+  printf "${GREEN}[+]${CLEAN} Sdlookup Installed${END}${END}"
 }
 
 dependenciesLinux() {
@@ -453,6 +462,7 @@ dependenciesLinux() {
   installSudomy
   installUro
   installFreq
+  installSdlookup
 
   echo "Don't forget to put the API keys on Subfinder on: $HOME/.config/subfinder/config.yaml"
   echo "Don't forget to put the API key on Chaos like this: echo 'export CHAOS_KEY="*************bd853b95252690b3ff86c2c2c08b*******************"' >> $HOME/.bashrc"
