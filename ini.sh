@@ -386,6 +386,17 @@ installMeg() {
   printf "${GREEN}[+]${CLEAN} Meg Installed${END}${END}"
 }
 
+installSudomy() {
+  printf "${YELLOW}[*]${CLEAN} Installing Sudomy${END}"
+
+  cd /opt
+  git clone --recursive https://github.com/screetsec/Sudomy.git
+  cd Sudomy
+  python3 -m pip install -r requirements.txt
+
+  printf "${GREEN}[+]${CLEAN} Meg Installed${END}${END}"
+}
+
 dependenciesLinux() {
   installPython3
   installJQ

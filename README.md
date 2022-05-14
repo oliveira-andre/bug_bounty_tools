@@ -53,6 +53,7 @@ chmod +x ./ini.sh; ./ini.sh
 - [ ] [KockPy](https://github.com/guelfoweb/knock)
 - [ ] [Photon](https://github.com/s0md3v/Photon)
 - [ ] [Meg](https://github.com/tomnomnom/meg)
+- [ ] [Sudomy](https://github.com/screetsec/Sudomy)
 
 ## Get API Keys
 
