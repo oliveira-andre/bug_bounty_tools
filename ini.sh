@@ -449,6 +449,15 @@ installPureDns() {
   printf "${GREEN}[+]${CLEAN} PureDns Installed${END}${END}"
 }
 
+installSigurlfinder() {
+  printf "${YELLOW}[*]${CLEAN} Installing Sigurlfind3r${END}"
+
+  go install -v github.com/signedsecurity/sigurlfind3r/cmd/sigurlfind3r@latest
+  ln -s $HOME/go/bin/sigurlfind3r /usr/bin/sigurlfind3r
+
+  printf "${GREEN}[+]${CLEAN} Sigurlfind3r Installed${END}${END}"
+}
+
 dependenciesLinux() {
   installPython3
   installJQ
@@ -491,6 +500,7 @@ dependenciesLinux() {
   installSdlookup
   installDnsValidator
   installPureDns
+  installSigurlfinder
 
   echo "Don't forget to put the API keys on Subfinder on: $HOME/.config/subfinder/config.yaml"
   echo "Don't forget to put the API key on Chaos like this: echo 'export CHAOS_KEY="*************bd853b95252690b3ff86c2c2c08b*******************"' >> $HOME/.bashrc"

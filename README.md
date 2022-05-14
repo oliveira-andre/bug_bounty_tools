@@ -59,6 +59,7 @@ chmod +x ./ini.sh; ./ini.sh
 - [ ] [Sdlookup](https://github.com/j3ssie/sdlookup)
 - [ ] [DnsValidator](https://github.com/vortexau/dnsvalidator)
 - [ ] [PureDns](https://github.com/d3mondev/puredns)
+- [ ] [Sigurlfind3r](https://github.com/signedsecurity/sigurlfind3r)
 
 ## Get API Keys
 
