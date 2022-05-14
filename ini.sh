@@ -470,6 +470,15 @@ installAirixss() {
   printf "${GREEN}[+]${CLEAN} AiriXss Installed${END}${END}"
 }
 
+installNilo() {
+  printf "${GREEN}[+]${CLEAN} Nilo Installed${END}${END}"
+
+  go install github.com/ferreiraklet/nilo@latest
+  ln -s $HOME/go/bin/nilo /usr/bin/nilo
+  
+  printf "${YELLOW}[*]${CLEAN} Installing Nilo${END}"
+}
+
 dependenciesLinux() {
   installPython3
   installJQ
@@ -514,6 +523,7 @@ dependenciesLinux() {
   installPureDns
   installSigurlfinder
   installAirixss
+  installNilo
 
   echo "Don't forget to put the API keys on Subfinder on: $HOME/.config/subfinder/config.yaml"
   echo "Don't forget to put the API key on Chaos like this: echo 'export CHAOS_KEY="*************bd853b95252690b3ff86c2c2c08b*******************"' >> $HOME/.bashrc"

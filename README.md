@@ -61,6 +61,7 @@ chmod +x ./ini.sh; ./ini.sh
 - [ ] [PureDns](https://github.com/d3mondev/puredns)
 - [ ] [Sigurlfind3r](https://github.com/signedsecurity/sigurlfind3r)
 - [ ] [Airixss](https://github.com/ferreiraklet/airixss)
+- [ ] [Nilo](https://github.com/ferreiraklet/nilo)
 
 ## Get API Keys
 
