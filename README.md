@@ -60,6 +60,7 @@ chmod +x ./ini.sh; ./ini.sh
 - [ ] [DnsValidator](https://github.com/vortexau/dnsvalidator)
 - [ ] [PureDns](https://github.com/d3mondev/puredns)
 - [ ] [Sigurlfind3r](https://github.com/signedsecurity/sigurlfind3r)
+- [ ] [Airixss](https://github.com/ferreiraklet/airixss)
 
 ## Get API Keys
 

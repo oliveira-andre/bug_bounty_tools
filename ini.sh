@@ -458,6 +458,18 @@ installSigurlfinder() {
   printf "${GREEN}[+]${CLEAN} Sigurlfind3r Installed${END}${END}"
 }
 
+installAirixss() {
+  printf "${YELLOW}[*]${CLEAN} Installing AiriXss${END}"
+
+  go install github.com/chromedp/chromedp@latest
+  ln -s $HOME/go/bin/chromedp /usr/bin/chromedp
+
+  go install github.com/ferreiraklet/airixss@latest
+  ln -s $HOME/go/bin/airixss /usr/bin/airixss
+
+  printf "${GREEN}[+]${CLEAN} AiriXss Installed${END}${END}"
+}
+
 dependenciesLinux() {
   installPython3
   installJQ
@@ -501,6 +513,7 @@ dependenciesLinux() {
   installDnsValidator
   installPureDns
   installSigurlfinder
+  installAirixss
 
   echo "Don't forget to put the API keys on Subfinder on: $HOME/.config/subfinder/config.yaml"
   echo "Don't forget to put the API key on Chaos like this: echo 'export CHAOS_KEY="*************bd853b95252690b3ff86c2c2c08b*******************"' >> $HOME/.bashrc"
