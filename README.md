@@ -55,6 +55,7 @@ chmod +x ./ini.sh; ./ini.sh
 - [ ] [Meg](https://github.com/tomnomnom/meg)
 - [ ] [Sudomy](https://github.com/screetsec/Sudomy)
 - [ ] [Uro](https://github.com/s0md3v/uro)
+- [ ] [Freq](https://github.com/takshal/freq)
 
 ## Get API Keys
 
