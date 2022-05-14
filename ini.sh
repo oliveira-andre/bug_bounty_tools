@@ -82,7 +82,7 @@ installFindomain() {
 installChaos() {
   printf "${YELLOW}[*]${CLEAN} Installing Chaos${END}"
 
-  GO111MODULE=on go get -v github.com/projectdiscovery/chaos-client/cmd/chaos
+  GO111MODULE=on go get -v github.com/projectdiscovery/chaos-client/cmd/chaos@latest
   ln -s $HOME/go/bin/chaos /usr/bin/chaos
 
   printf "${GREEN}[+]${CLEAN} Chaos Installed${END}${END}"
@@ -239,7 +239,7 @@ installParamSpider() {
   printf "${YELLOW}[*]${CLEAN} Installing ParamSpider${END}"
 
   cd /opt
-  git clone https://github.com/devanshbatham/ParamSpider
+  git clone https://github.com/devanshbatham/ParamSpider.git
   pip3 install -r requirements.txt
 
   printf "${GREEN}[+]${CLEAN} ParamSpider Installed${END}${END}"
