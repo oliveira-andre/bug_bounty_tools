@@ -423,6 +423,17 @@ installSdlookup() {
   printf "${GREEN}[+]${CLEAN} Sdlookup Installed${END}${END}"
 }
 
+installDnsValidator() {
+  printf "${YELLOW}[*]${CLEAN} Installing DnsValidator${END}"
+
+  cd /opt
+  git clone https://github.com/vortexau/dnsvalidator.git
+  cd dnsvalidator
+  python3 setup.py install
+
+  printf "${GREEN}[+]${CLEAN} DnsValidator Installed${END}${END}"
+}
+
 dependenciesLinux() {
   installPython3
   installJQ
@@ -463,6 +474,7 @@ dependenciesLinux() {
   installUro
   installFreq
   installSdlookup
+  installDnsValidator
 
   echo "Don't forget to put the API keys on Subfinder on: $HOME/.config/subfinder/config.yaml"
   echo "Don't forget to put the API key on Chaos like this: echo 'export CHAOS_KEY="*************bd853b95252690b3ff86c2c2c08b*******************"' >> $HOME/.bashrc"

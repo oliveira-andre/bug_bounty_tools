@@ -57,6 +57,7 @@ chmod +x ./ini.sh; ./ini.sh
 - [ ] [Uro](https://github.com/s0md3v/uro)
 - [ ] [Freq](https://github.com/takshal/freq)
 - [ ] [Sdlookup](https://github.com/j3ssie/sdlookup)
+- [ ] [DnsValidator](https://github.com/vortexau/dnsvalidator)
 
 ## Get API Keys
 
