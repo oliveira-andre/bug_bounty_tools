@@ -54,6 +54,7 @@ chmod +x ./ini.sh; ./ini.sh
 - [ ] [Photon](https://github.com/s0md3v/Photon)
 - [ ] [Meg](https://github.com/tomnomnom/meg)
 - [ ] [Sudomy](https://github.com/screetsec/Sudomy)
+- [ ] [Uro](https://github.com/s0md3v/uro)
 
 ## Get API Keys
 

@@ -394,7 +394,15 @@ installSudomy() {
   cd Sudomy
   python3 -m pip install -r requirements.txt
 
-  printf "${GREEN}[+]${CLEAN} Meg Installed${END}${END}"
+  printf "${GREEN}[+]${CLEAN} Sudomy Installed${END}${END}"
+}
+
+installUro() {
+  printf "${YELLOW}[*]${CLEAN} Installing Uro${END}"
+
+  pip3 install uro
+
+  printf "${GREEN}[+]${CLEAN} Uro Installed${END}${END}"
 }
 
 dependenciesLinux() {
@@ -433,6 +441,8 @@ dependenciesLinux() {
   installKnockPy
   installPhoton
   installMeg
+  installSudomy
+  installUro
 
   echo "Don't forget to put the API keys on Subfinder on: $HOME/.config/subfinder/config.yaml"
   echo "Don't forget to put the API key on Chaos like this: echo 'export CHAOS_KEY="*************bd853b95252690b3ff86c2c2c08b*******************"' >> $HOME/.bashrc"
