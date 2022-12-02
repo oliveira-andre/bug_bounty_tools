@@ -36,7 +36,8 @@ installGo() {
 installAnew() {
   printf "${YELLOW}[*]${CLEAN} Installing Anew ${END}"
 
-  /usr/local/go/bin/go get -u github.com/tomnomnom/anew
+  /usr/local/go/bin/go install github.com/tomnomnom/anew@latest
+  sudo rm -rf /usr/bin/anew
   sudo ln -s $HOME/go/bin/anew /usr/bin/anew
 
   printf "${GREEN}[+]${CLEAN} Anew Installed${END}${END}"
@@ -45,7 +46,8 @@ installAnew() {
 installAssetfinder() {
   printf "${YELLOW}[*]${CLEAN} Installing Assetfinder${END}"
 
-  /usr/local/go/bin/go get -u github.com/tomnomnom/assetfinder
+  /usr/local/go/bin/go install github.com/tomnomnom/assetfinder@latest
+  sudo rm -rf /usr/bin/assetfinder
   sudo ln -s $HOME/go/bin/assetfinder /usr/bin/assetfinder
 
   printf "${GREEN}[+]${CLEAN} Assetfinder Installed${END}${END}"
@@ -54,7 +56,7 @@ installAssetfinder() {
 installAmass() {
   printf "${YELLOW}[*]${CLEAN} Installing Amass${END}"
 
-  snap install amass
+  sudo snap install amass
 
   printf "${GREEN}[+]${CLEAN} Amass Installed${END}${END}"
 }
@@ -62,7 +64,9 @@ installAmass() {
 installSubfinder() {
   printf "${YELLOW}[*]${CLEAN} Installing Subfinder${END}"
 
-  GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
+  /usr/local/go/bin/go install github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+
+  sudo rm -rf /usr/bin/subfinder
   sudo ln -s $HOME/go/bin/subfinder /usr/bin/subfinder
 
   printf "${GREEN}[+]${CLEAN} Subfinder Installed${END}${END}"
@@ -74,6 +78,8 @@ installFindomain() {
   cd /opt
   wget https://github.com/findomain/findomain/releases/latest/download/findomain-linux
   chmod +x findomain-linux
+
+  sudo rm -rf /usr/bin/findomain
   sudo ln -s /opt/findomain-linux /usr/bin/findomain
 
   printf "${GREEN}[+]${CLEAN} Findomain Installed${END}${END}"
@@ -82,7 +88,9 @@ installFindomain() {
 installChaos() {
   printf "${YELLOW}[*]${CLEAN} Installing Chaos${END}"
 
-  GO111MODULE=on go get -v github.com/projectdiscovery/chaos-client/cmd/chaos@latest
+  /usr/local/go/bin/go install github.com/projectdiscovery/chaos-client/cmd/chaos@latest
+
+  sudo rm -rf /usr/bin/chaos
   sudo ln -s $HOME/go/bin/chaos /usr/bin/chaos
 
   printf "${GREEN}[+]${CLEAN} Chaos Installed${END}${END}"
@@ -93,6 +101,7 @@ installGithubSearch() {
 
   cd /opt
   git clone https://github.com/gwen001/github-search.git
+
   cd github-search
   pip3 install -r requirements3.txt
 
@@ -102,7 +111,9 @@ installGithubSearch() {
 installHttpx() {
   printf "${YELLOW}[*]${CLEAN} Installing HTTPX${END}"
 
-  GO111MODULE=on go get -v github.com/projectdiscovery/httpx/cmd/httpx
+  /usr/local/go/bin/go install github.com/projectdiscovery/httpx/cmd/httpx@latest
+
+  sudo rm -rf /usr/bin/httpx
   sudo ln -s $HOME/go/bin/httpx /usr/bin/httpx
 
   printf "${GREEN}[+]${CLEAN} HTTPX Installed${END}${END}"
@@ -111,7 +122,9 @@ installHttpx() {
 installGowitness() {
   printf "${YELLOW}[*]${CLEAN} Installing Gowitness${END}"
 
-  go get -u -v github.com/sensepost/gowitness
+  /usr/local/go/bin/go install github.com/sensepost/gowitness@latest
+
+  sudo rm -rf /usr/bin/gowitness
   sudo ln -s $HOME/go/bin/gowitness /usr/bin/gowitness
 
   printf "${GREEN}[+]${CLEAN} Gowitness Installed${END}${END}"
@@ -120,7 +133,9 @@ installGowitness() {
 installWaybackurls() {
   printf "${YELLOW}[*]${CLEAN} Installing Waybackurls${END}"
 
-  go get -u -v github.com/tomnomnom/waybackurls
+  /usr/local/go/bin/go install github.com/tomnomnom/waybackurls@latest
+
+  sudo rm -rf /usr/bin/waybackurls
   sudo ln -s $HOME/go/bin/waybackurls /usr/bin/waybackurls
 
   printf "${GREEN}[+]${CLEAN} Waybackurls Installed${END}${END}"
@@ -129,7 +144,9 @@ installWaybackurls() {
 installGauplus() {
   printf "${YELLOW}[*]${CLEAN} Installing GauPlus${END}"
 
-  GO111MODULE=on go get -u -v github.com/bp0lr/gauplus
+  /usr/local/go/bin/go install -v github.com/bp0lr/gauplus@latest
+
+  sudo rm -rf /usr/bin/gauplus
   sudo ln -s $HOME/go/bin/gauplus /usr/bin/gauplus
 
   printf "${GREEN}[+]${CLEAN} GauPlus Installed${END}${END}"
@@ -138,7 +155,9 @@ installGauplus() {
 installGau() {
   printf "${YELLOW}[*]${CLEAN} Installing Gau${END}"
 
-  GO111MODULE=on go get -u -v github.com/lc/gau
+  /usr/local/go/bin/go install github.com/lc/gau@latest
+
+  sudo rm -rf /usr/bin/gau
   sudo ln -s $HOME/go/bin/gau /usr/bin/gau
 
   printf "${GREEN}[+]${CLEAN} Gau Installed${END}${END}"
@@ -148,7 +167,9 @@ installMetabigor() {
   printf "${YELLOW}[*]${CLEAN} Installing Metabigor${END}"
 
   sudo apt-get install prips -y
-  GO111MODULE=on go get github.com/j3ssie/metabigor
+  /usr/local/go/bin/go install github.com/j3ssie/metabigor@latest
+
+  sudo rm -rf /usr/bin/metabigor
   sudo ln -s $HOME/go/bin/metabigor /usr/bin/metabigor
 
   printf "${GREEN}[+]${CLEAN} Metabigor Installed${END}${END}"
@@ -157,7 +178,9 @@ installMetabigor() {
 installHakrevdns() {
   printf "${YELLOW}[*]${CLEAN} Installing Hakrevdns${END}"
 
-  go get github.com/hakluke/hakrevdns
+  /usr/local/go/bin/go install github.com/hakluke/hakrevdns@latest
+
+  sudo rm -rf /usr/bin/hakrevdns
   sudo ln -s $HOME/go/bin/hakrevdns /usr/bin/hakrevdns
 
   printf "${GREEN}[+]${CLEAN} Hakrevdns Installed${END}${END}"
@@ -166,7 +189,9 @@ installHakrevdns() {
 installHakcheckurl() {
   printf "${YELLOW}[*]${CLEAN} Installing Hakcheckurl${END}"
 
-  go install github.com/hakluke/hakcheckurl@latest
+  /usr/local/go/bin/go install github.com/hakluke/hakcheckurl@latest
+
+  sudo rm -rf /usr/bin/hakcheckurl
   sudo ln -s $HOME/go/bin/hakcheckurl /usr/bin/hakcheckurl
 
   printf "${GREEN}[+]${CLEAN} Hakcheckurl Installed${END}${END}"
@@ -175,7 +200,9 @@ installHakcheckurl() {
 installKxss() {
   printf "${YELLOW}[*]${CLEAN} Installing Kxss${END}"
 
-  go get github.com/Emoe/kxss
+  /usr/local/go/bin/go install github.com/Emoe/kxss@latest
+
+  sudo rm -rf /usr/bin/kxss
   sudo ln -s $HOME/go/bin/kxss /usr/bin/kxss
 
   printf "${GREEN}[+]${CLEAN} Kxss Installed${END}${END}"
@@ -184,7 +211,9 @@ installKxss() {
 installDalfox() {
   printf "${YELLOW}[*]${CLEAN} Installing Dalfox${END}"
 
-  GO111MODULE=on go get -v github.com/hahwul/dalfox/v2
+  /usr/local/go/bin/go install github.com/hahwul/dalfox/v2@latest
+
+  sudo rm -rf /usr/bin/dalfox
   sudo ln -s $HOME/go/bin/dalfox /usr/bin/dalfox
 
   printf "${GREEN}[+]${CLEAN} Dalfox Installed${END}${END}"
@@ -193,7 +222,9 @@ installDalfox() {
 installGF() {
   printf "${YELLOW}[*]${CLEAN} Installing GF${END}"
 
-  go get -u github.com/tomnomnom/gf
+  /usr/local/go/bin/go install github.com/tomnomnom/gf@latest
+
+  sudo rm -rf /usr/bin/gf
   sudo ln -s $HOME/go/bin/gf /usr/bin/gf
 
   if [ -d "$HOME/.gf" ]
@@ -248,7 +279,9 @@ installParamSpider() {
 installUnfur() {
   printf "${YELLOW}[*]${CLEAN} Installing Unfur${END}"
 
-  go get -u github.com/tomnomnom/unfurl
+  /usr/local/go/bin/go install github.com/tomnomnom/unfurl@latest
+
+  sudo rm -rf /usr/bin/unfurl
   sudo ln -s $HOME/go/bin/unfurl /usr/bin/unfurl
 
   printf "${GREEN}[+]${CLEAN} Unfur Installed${END}${END}"
@@ -267,7 +300,9 @@ installArjun() {
 installSubjs() {
   printf "${YELLOW}[*]${CLEAN} Installing Subjs${END}"
 
-  GO111MODULE=on go get -u -v github.com/lc/subjs
+  /usr/local/go/bin/go install -v github.com/lc/subjs@latest
+
+  sudo rm -rf /usr/bin/subjs
   sudo ln -s $HOME/go/bin/subjs /usr/bin/subjs
 
   printf "${GREEN}[+]${CLEAN} Subjs Installed${END}${END}"
@@ -278,7 +313,7 @@ installAntiBurl() {
 
   cd /opt
   wget https://raw.githubusercontent.com/tomnomnom/hacks/master/anti-burl/main.go
-  go build main.go
+  /usr/local/go/bin/go build main.go
 
   rm -rf main.go
   mv main $HOME/go/bin/anti-burl
@@ -310,7 +345,9 @@ installKiterunner() {
 installFfuf() {
   printf "${YELLOW}[*]${CLEAN} Installing Ffuf${END}"
 
-  go get -u github.com/ffuf/ffuf
+  /usr/local/go/bin/go install github.com/ffuf/ffuf@latest
+
+  sudo rm -rf /usr/bin/ffuf
   sudo ln -s $HOME/go/bin/ffuf /usr/bin/ffuf
 
   printf "${GREEN}[+]${CLEAN} Ffuf Installed${END}${END}"
@@ -319,7 +356,9 @@ installFfuf() {
 installNuclei() {
   printf "${YELLOW}[*]${CLEAN} Installing Nuclei${END}"
 
-  GO111MODULE=on go get -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
+  /usr/local/go/bin/go install github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
+
+  sudo rm -rf /usr/bin/nuclei
   sudo ln -s $HOME/go/bin/nuclei /usr/bin/nuclei
   nuclei -update-templates
 
@@ -340,7 +379,9 @@ installJSscanner() {
 installDnsx() {
   printf "${YELLOW}[*]${CLEAN} Installing DNSX${END}"
 
-  go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest
+  /usr/local/go/bin/go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest
+
+  sudo rm -rf /usr/bin/dnsx
   sudo ln -s $HOME/go/bin/dnsx /usr/bin/dnsx
 
   printf "${GREEN}[+]${CLEAN} DNSX Installed${END}${END}"
@@ -349,7 +390,9 @@ installDnsx() {
 installGoop() {
   printf "${YELLOW}[*]${CLEAN} Installing GOOP${END}"
 
-  go get -u github.com/deletescape/goop@latest
+  /usr/local/go/bin/go install github.com/deletescape/goop@latest
+
+  sudo rm -rf /usr/bin/goop
   sudo ln -s $HOME/go/bin/goop /usr/bin/goop
 
   printf "${GREEN}[+]${CLEAN} GOOP Installed${END}${END}"
@@ -380,7 +423,9 @@ installPhoton() {
 installMeg() {
   printf "${YELLOW}[*]${CLEAN} Installing Meg${END}"
 
-  go install -v github.com/tomnomnom/meg
+  /usr/local/go/bin/go install github.com/tomnomnom/meg
+
+  sudo rm -rf /usr/bin/meg
   sudo ln -s $HOME/go/bin/meg /usr/bin/meg
 
   printf "${GREEN}[+]${CLEAN} Meg Installed${END}${END}"
@@ -408,7 +453,9 @@ installUro() {
 installFreq() {
   printf "${YELLOW}[*]${CLEAN} Installing Freq${END}"
 
-  go install github.com/takshal/freq@latest
+  /usr/local/go/bin/go install github.com/takshal/freq@latest
+
+  sudo rm -rf /usr/bin/freq
   sudo ln -s $HOME/go/bin/freq /usr/bin/freq
 
   printf "${GREEN}[+]${CLEAN} Freq Installed${END}${END}"
@@ -417,7 +464,9 @@ installFreq() {
 installSdlookup() {
   printf "${YELLOW}[*]${CLEAN} Installing Sdlookup${END}"
 
-  go install github.com/j3ssie/sdlookup@latest
+  /usr/local/go/bin/go install github.com/j3ssie/sdlookup@latest
+
+  sudo rm -rf /usr/bin/sdlookup
   sudo ln -s $HOME/go/bin/sdlookup /usr/bin/sdlookup
 
   printf "${GREEN}[+]${CLEAN} Sdlookup Installed${END}${END}"
@@ -443,7 +492,9 @@ installPureDns() {
   make
   sudo make install
 
-  go install github.com/d3mondev/puredns/v2@latest
+  /usr/local/go/bin/go install github.com/d3mondev/puredns/v2@latest
+
+  sudo rm -rf /usr/bin/puredns
   sudo ln -s $HOME/go/bin/puredns /usr/bin/puredns
 
   printf "${GREEN}[+]${CLEAN} PureDns Installed${END}${END}"
@@ -452,7 +503,9 @@ installPureDns() {
 installSigurlfinder() {
   printf "${YELLOW}[*]${CLEAN} Installing Sigurlfind3r${END}"
 
-  go install -v github.com/signedsecurity/sigurlfind3r/cmd/sigurlfind3r@latest
+  /usr/local/go/bin/go install github.com/signedsecurity/sigurlfind3r/cmd/sigurlfind3r@latest
+
+  sudo rm -rf /usr/bin/sigurlfind3r
   sudo ln -s $HOME/go/bin/sigurlfind3r /usr/bin/sigurlfind3r
 
   printf "${GREEN}[+]${CLEAN} Sigurlfind3r Installed${END}${END}"
@@ -461,10 +514,12 @@ installSigurlfinder() {
 installAirixss() {
   printf "${YELLOW}[*]${CLEAN} Installing AiriXss${END}"
 
-  go install github.com/chromedp/chromedp@latest
+  /usr/local/go/bin/go install github.com/chromedp/chromedp@latest
+  sudo rm -rf /usr/bin/chromedp
   sudo ln -s $HOME/go/bin/chromedp /usr/bin/chromedp
 
-  go install github.com/ferreiraklet/airixss@latest
+  /usr/local/go/bin/go install github.com/ferreiraklet/airixss@latest
+  sudo rm -rf /usr/bin/airixss
   sudo ln -s $HOME/go/bin/airixss /usr/bin/airixss
 
   printf "${GREEN}[+]${CLEAN} AiriXss Installed${END}${END}"
@@ -473,7 +528,9 @@ installAirixss() {
 installNilo() {
   printf "${YELLOW}[*]${CLEAN} Installing Nilo${END}"
 
-  go install github.com/ferreiraklet/nilo@latest
+  /usr/local/go/bin/go install github.com/ferreiraklet/nilo@latest
+
+  sudo rm -rf /usr/bin/nilo
   sudo ln -s $HOME/go/bin/nilo /usr/bin/nilo
   
   printf "${GREEN}[+]${CLEAN} Nilo Installed${END}${END}"
